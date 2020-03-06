@@ -1,0 +1,244 @@
+<html>
+<head>
+<title>welcome home!</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+$("#apps").hide();
+$("#pyDo").hide();
+
+$("#menuu").click(function(){
+$("#apps").show();
+$("#weather").hide();
+$("#pyDo").hide();
+});
+
+$("#pyGo").click(function(){
+$("#apps").hide();
+$("#weather").hide();
+$("#pyDo").show();
+});
+
+$("#wStart").click(function(){
+$("#apps").hide();
+$("#weather").show();
+$("#pyDo").hide();
+});
+
+});
+
+</script>
+
+<script>
+//begining of shellMe program, and its using functions
+function shellMe() {
+
+var doodle = prompt('@shellMe:');
+
+if (doodle == 'hello') {
+alert('>> i am a giant bucket');
+done();
+}
+
+else if (doodle == 'bucket') {
+alert('>> hey! i am!');
+done();
+}
+
+else if (doodle == 'google') {
+window.open("http://www.google.com");
+}
+
+else if (doodle == 'youtube') {
+window.open("http://www.youtube.com");
+}
+
+else if (doodle == 'facebook') {
+window.open("http://www.facebook.com");
+}
+
+else if (doodle == 'beltchecker') {
+window.open("http://www.beltchecker.com");
+}
+
+else if (doodle == 'math') {
+math();
+}
+
+else if (doodle == 'time') {
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+alert('>> ' + dateTime);
+done();
+}
+
+else if (doodle == 'help') {
+alert('>> welcome to help!');
+alert('>> type \'math\' to do basic math');
+alert('>> type \'time\' to get the time and date');
+alert('>> type \'version\' to get the shellMe version');
+alert('>> type the name of a website that is supported to go to that web app');
+alert('>> lastly, you can always look at the source code no problem! please build off me!');
+done();
+}
+
+else if (doodle == 'ver' || doodle == 'version') {
+alert ('>> shellMe version 0.01 beta');
+done();
+}
+
+else {
+alert('>> invalid input');
+done();
+}
+
+}
+
+function math() {
+
+var mathOne = prompt('@shellMe >> first number:');
+var mathDo = prompt('@shellMe >> +, -, *, /:');
+var mathTwo = prompt('@shellMe >> second number:');
+
+mathOne = parseInt(mathOne);
+mathTwo = parseInt(mathTwo);
+
+if (mathDo == '+') {
+alert(mathOne + mathTwo);
+done();
+}
+
+else if (mathDo == '-') {
+alert(mathOne - mathTwo);
+done();
+}
+
+else if (mathDo == '*') {
+alert(mathOne * mathTwo);
+done();
+}
+
+else if (mathDo == '/') {
+alert(mathOne / mathTwo);
+done();
+}
+
+else {
+alert('>> you done goofed');
+done();
+}
+
+}
+
+function done() {
+var areYou = prompt('@shellMe >> are you done?');
+if (areYou == 'no') {
+shellMe();
+}
+
+else if (areYou == 'yes') {
+alert('>> thank you for using shellMe!');
+}
+
+else {
+alert('>> invalid entry');
+done();
+}
+
+}
+//end of shellMe and its using functions
+
+
+
+</script>
+
+<style>
+html {
+background-image: url('https://i.ytimg.com/vi/hF_LjTUvP-U/maxresdefault.jpg');
+background-repeat: no-repeat;
+background-position: cover;
+background-size: 100%;
+}
+
+.table1 {
+background: rgba(255,255,255,0.5);
+}
+</style>
+</head>
+<body>
+
+<center>
+<table width=50% border=1 class='table1'>
+
+<tr>
+<td valign="top">
+<p id="p1"></p>
+
+<script>
+//time at top
+function showTime() {
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+
+document.getElementById("p1").innerHTML = dateTime;
+}
+
+showTime()
+//end time at top
+</script>
+
+<br />
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" id="pyGo" height="100" width="100" title="python">
+<img src="https://cdn.pixabay.com/photo/2017/11/07/07/06/menu-2925825_960_720.png" id="menuu" height="100" width="100">
+<img src="https://blog.macsales.com/wp-content/uploads/2019/02/ios12-weather-app-icon-thumbnail_2x.png" id="wStart" height="100" width="100"></center>
+<center><br />
+<div id="weather">
+<script type='text/javascript' src='https://darksky.net/widget/default/46.8606,-96.8238/us12/en.js?width=100%&height=350&title=fargo, nd&textColor=333333&bgColor=FFFFFF&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script> <br />
+</div>
+
+
+<div id="apps">
+<a href="https://pixlr.com/x/" target="_blank"><img src="https://reeoo.xnny.net/Autodesk%20Pixlr-icon.png!icon512" height="50" width="50" title="pixlr"></a>
+
+<a href="http://www.youtube.com" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Youtube-512.png" height="50" width="50" title="youtube"></a>
+
+<a href="https://www.pandora.com" target="_blank"><img src="https://cdn1.iconfinder.com/data/icons/social-shade-rounded-rects/512/pandora-512.png" height="50" width="50" title="pandora"></a>
+
+<a href="http://www.facebook.com" target="_blank"><img src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-Logo.png" height="50" width="50" title="facebook"></a>
+
+<a href="http://www.soundcloud.com" target="_blank"><img src="https://i.pinimg.com/originals/b8/8e/35/b88e35fbc9a5f44be955415e75c1130c.png" height="50" width="50" title="soundcloud"></a>
+
+<br />
+
+<a href="http://www.google.com" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-8/512/Chrome.png" height="50" width="50" title="google"></a>
+
+<a href="http://drive.google.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/768px-Google_Drive_logo.png" height="50" width="50" title="google drive"></a>
+
+<a href="http://docs.google.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Google_Docs_logo.svg/512px-Google_Docs_logo.svg.png" height="50" width="50" title="google docs"></a>
+
+<a href="http://www.jsfiddle.net" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/jsfiddle.svg" height="50" width="50" title="js fiddle"></a>
+
+<img src="https://cdn2.iconfinder.com/data/icons/flat-common-9/32/command_prompt-512.png" height="50" width="50" title="shellMe (WIP)" onclick="shellMe()">
+</div>
+
+<div id="pyDo"><iframe src="https://trinket.io/embed/python/67393a662c" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+</center>
+
+Ⓒ copyLEFT boyo1991 - Weeb Top - open source, please use, redistribute,  make it better, give credit!
+
+
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
